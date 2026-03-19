@@ -18,8 +18,8 @@ RETURNING id, name, email
 `
 
 type CreateUserParams struct {
-	Name  string
-	Email string
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }
 
 func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (User, error) {
